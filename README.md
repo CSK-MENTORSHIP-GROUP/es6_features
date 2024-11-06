@@ -134,5 +134,21 @@ myPromise
 
 ### New Array Methods
 ES6 introduced several new array methods that make it easier to manipulate arrays and perform common operations.
+```javascript
+const string = 'hello';
+const chars = Array.from(string);  // ['h', 'e', 'l', 'l', 'o']
 
+// With a mapping function:
+const numbers = Array.from([1, 2, 3], x => x * 2); // [2, 4, 6]
+```
+
+| Method               | Description                                                                         |
+|----------------------|-------------------------------------------------------------------------------------|
+| `Array.from()`       | Converts an iterable or array-like object to an array.                              |
+| `Array.of()`         | Creates an array with specific arguments as elements.                               |
+| `Array.find()`       | Returns the first element that satisfies a condition.                               |
+| `Array.findIndex()`  | Returns the index of the first element that satisfies a condition.                  |
+| `Array.includes()`   | Checks if an array contains a specific element, returning `true` or `false`.        |
+| `Array.fill()`       | Fills an array with a specified static value.                                       |
+| `Array.copyWithin()` | Copies part of the array to another location within the same array.                 |
 
