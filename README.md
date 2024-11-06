@@ -33,3 +33,106 @@ city = 'Los Angeles';
 
 const country = 'USA';
 // country = 'Canada'; // Error: Cannot reassign a const
+```
+### Arrow Functions
+You don't need the function keyword, the return keyword, and the curly brackets.
+
+```javascript
+// ES5
+var x = function(x, y) {
+   return x * y;
+}
+
+// ES6
+const x = (x, y) => x * y;
+```
+### Template Literals
+are a way to work with strings that provides more flexibility and cleaner syntax, especially for embedding expressions and multi-line strings.
+
+```javascript
+const name = "Alice";
+const age = 25;
+const message = `My name is ${name} and I am ${age} years old.`;
+// Output: "My name is Alice and I am 25 years old."
+```
+
+### Destructuring Assignment (Object and Array destucturing)
+Destructuring assignment makes it easy to assign array values and object properties to variables.
+
+#### object destructuring
+```javascript
+// Create an Object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+// Destructuring Assignment
+let { firstName, age } = person;
+// Display Data
+document.getElementById("demo").innerHTML =
+firstName + " is " + age + " years old.";
+//console
+console.log(firstName + " is " + age + " years old.")
+```
+#### Array destructuring
+```javascript
+// Create an Array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// Destructuring Assignment
+let [fruit1, fruit2] = fruits;
+```
+
+### Spread and Rest Operators
+The ... operator expands an iterable (like an array) into more elements:
+```javascript
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+console.log(year)
+```
+### Modules
+
+### Promises
+ Promises are a way to handle asynchronous operations, such as fetching data from an API, reading files, or processing data in the background. A promise represents an operation that hasn’t completed yet but is expected to be in the future. It acts like a placeholder for the result of that operation.
+
+ States of a Promise: Pending: The initial state of a promise. Fulfilled: The promise has been resolved. Rejected: The promise has been rejected.
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  let success = true;
+
+  if (success) {
+    resolve("Operation succeeded!");
+  } else {
+    reject("Operation failed!");
+  }
+});
+```
+Handling Promises with .then, .catch, and .finally:
+
+.then(): Used to handle the result when the promise is fulfilled.
+.catch(): Used to handle errors or rejections.
+.finally(): Used to run code after the promise settles, regardless of outcome.
+```javascript
+myPromise
+  .then(result => {
+    console.log(result);  // Logs: "Operation succeeded!"
+  })
+  .catch(error => {
+    console.error(error);  // Logs: "Operation failed!" if rejected
+  })
+  .finally(() => {
+    console.log("Promise settled.");
+  });
+```
+
+### New Array Methods
+ES6 introduced several new array methods that make it easier to manipulate arrays and perform common operations.
+
+
